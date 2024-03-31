@@ -1,6 +1,7 @@
 using AssetLoader.UMM;
 using AssetPack.Runtime;
 using HarmonyLib;
+using Helpers;
 using Model.Database;
 using System.Collections.Generic;
 using System.IO;
@@ -76,4 +77,12 @@ static class AssetLoaderPatch
 		return true;
 	}
 
+	[HarmonyPatch(typeof(SceneryAssetManager), nameof(SceneryAssetManager.OnDestroy))]
+	[HarmonyPrefix]
+	private static bool OnDestroy()
+	{
+		tenderSwaps.Clear();
+
+		return true;
+	}
 }
