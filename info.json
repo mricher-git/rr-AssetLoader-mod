@@ -1,6 +1,6 @@
 {
 	"Id": "AssetLoader",
-	"Version": "1.0.0",
+	"Version": "1.0.1",
 	"DisplayName": "Asset Loader",
 	"Author": "Vanguard",
 	"EntryMethod": "AssetLoader.UMM.Loader.Load",
